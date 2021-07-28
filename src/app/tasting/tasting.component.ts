@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import Tiendas  from '../../assets/json/TiendasFrost.json';
+import Tiendas  from '../../assets/json/degustaciones.json';
 
 @Component({
   selector: 'app-tasting',
@@ -15,9 +15,8 @@ tiendas = Tiendas;
   constructor() { }
 
   ngOnInit(): void {
-  
-  }
 
+  }
 
 
 
