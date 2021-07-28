@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { CanAccessGuard} from './guards/can-access.guard';
 import { WinformComponent } from './winform/winform.component';
 import { PromotionGuard } from './guards/promotion.guard';
-
+import { TastingComponent } from './tasting/tasting.component';
+ 
 const routes: Routes = [
-  {path:"inicio", component: IndexComponent},
+  {path:"", component: IndexComponent},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
+  {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
   {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
-  {path: "", redirectTo: "/inicio", pathMatch: 'full' },
-  { path: "**", redirectTo:  "/inicio" } 
+  {path: "", redirectTo: "/", pathMatch: 'full' },
+  { path: "**", redirectTo:  "/" } 
 ];
 
 @NgModule({

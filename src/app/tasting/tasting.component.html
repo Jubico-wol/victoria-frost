@@ -1,0 +1,127 @@
+<!-- nav bar -->
+<section>
+    <div class="container-fluid">
+        <div class="row menu" style="background-color:#2BD8F7; height: 61px;">
+            <div class="col-sm-2 col-md-2 col-lg-2 p-0">
+                <img style="float: left;max-width: 155px;" src="../../assets/home_page/header/Top_Header_Esquina_1_Logo.png">
+                <img style="position: absolute; width: 40px;left: 8%;top: 2%;" src="../../assets/home_page/header/LOGO V.png">
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a routerLink="/home" class="nav-link active pointer" aria-current="page">Nueva Fórmula</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/home" class="nav-link pointer">Características</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/home" class="nav-link pointer">Microfiltrado</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/home" class="nav-link pointer">Presentaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/home" class="nav-link pointer">Stickers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link pointer">Degustaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pointer" target="_blank" href="../../assets/terminosycondicionesvictoriafrost.pdf">Términos y Condiciones</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 p-0">
+                <img style="float: right;max-width: 74px;" src="../../assets/home_page/header/Top_Header_Esquina.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- data table -->
+<section class="flexbox-center" id="dataTable">
+    <div class="container justify-content-center align-items-center">
+   
+   
+        <div class="row">
+            <div class="col-md-6">
+               <h1 class="title">Ubicaciones de desgustaciones</h1>
+            </div>
+            <div class="col-md-6">
+                <input type="text" [(ngModel)]="searchText" class="form-control float-right radius" placeholder="Buscar">
+            </div>
+        </div>
+  
+    <br>
+    
+        <table class="table">
+            <thead>
+              <tr>
+              
+                <th scope="col">Negocio</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Municipio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let t of tiendas | filter:searchText | paginate: { itemsPerPage: itemPerPage, currentPage: pagination }">
+    
+                <td>{{t.NEGOCIO}}</td>
+                <td>{{t.DEPARTAMENTO}}</td>
+                <td>{{t.MUNICIPIO}}</td>
+          
+              </tr>
+    
+    
+           
+      
+            </tbody>
+            
+          </table>
+        
+          <pagination-controls (pageChange)="pagination = $event"></pagination-controls>
+    
+    
+    
+    
+    
+    
+    
+    </div>
+</section>
+
+
+<!-- footer  -->
+<section id="section10-bg" class="p-3 d-flex justify-content-center">
+    <div class="container row">
+
+        <div class="col-md-8 col-sm-12">
+            <img style="width: 100%; margin: 0 auto; display: block;" src="../../assets/home_page/footer/DECRETO.png">
+        </div>
+        <div class="col-md-4 col-sm-12 text-center pt-sm-3">
+            <a href="https://www.facebook.com/CervezaVictoriaFrost" target="_blank">
+                <img class="redes" src="../../assets/home_page/footer/facebook icon.png" alt="">
+            </a>
+            <a href="https://twitter.com/victoriafrost?lang=es" target="_blank">
+                <img class="redes" src="../../assets/home_page/footer/twiiter icon.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/cervezavictoriafrost/?hl=es" target="_blank">
+                <img class="redes" src="../../assets/home_page/footer/instagram icon.png" alt="">
+            </a>
+
+
+        </div>
+    </div>
+</section>
