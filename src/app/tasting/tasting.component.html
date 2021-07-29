@@ -6,8 +6,8 @@
                 <img style="float: left;max-width: 155px;" src="../../assets/home_page/header/Top_Header_Esquina_1_Logo.png">
                 <img style="position: absolute; width: 40px;left: 8%;top: 2%;" src="../../assets/home_page/header/LOGO V.png">
             </div>
-            <div class="col-sm-8 col-md-8 col-lg-8">
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="col-sm-8 col-md-8 col-lg-8" style="z-index: 1;">
+                <nav class="navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -24,17 +24,19 @@
                                 <li class="nav-item">
                                     <a routerLink="/home" class="nav-link pointer">Microfiltrado</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a routerLink="/home" class="nav-link pointer">Presentaciones</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a routerLink="/home" class="nav-link pointer">Stickers</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a  class="nav-link pointer">Degustaciones</a>
-                                </li>
+                               
                                 <li class="nav-item">
                                     <a class="nav-link pointer" target="_blank" href="../../assets/terminosycondicionesvictoriafrost.pdf">Términos y Condiciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- <a  class="nav-link pointer">Degustaciones</a> -->
+                                    <img src="../../assets/navItem.png" class="pointer" alt="GRAN DEGUSTACION NACIONAL" style="width: 200px;">
                                 </li>
                             </ul>
 
@@ -54,8 +56,9 @@
 <section class="flexbox-center" id="dataTable">
     <div class="container justify-content-center align-items-center">
    
-   
+        <br>
         <div class="row">
+          
             <div class="col-md-6">
                <h1 class="title">Ubicaciones de degustaciones</h1>
             </div>
@@ -64,7 +67,7 @@
             </div>
         </div>
   
-    <br>
+        <br>
     
         <table class="table">
             <thead>
