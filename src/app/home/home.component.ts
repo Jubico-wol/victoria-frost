@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getIPAddress();
+    // this.getIPAddress();
    
   }
 
@@ -49,6 +49,8 @@ export class HomeComponent implements OnInit {
 data:any;
 ganador:any;
 message;
+
+
 async getIPAddress()
   {
 
@@ -62,7 +64,6 @@ async getIPAddress()
     
 
         if(this.ganador==true && this.message==1){
-          // this.surprise();
           this.modalWinner();
           this.cookieService.set( 'promotion', 'Victoria Frost', {expires: 0.1, sameSite: 'Lax'});
         }
@@ -82,11 +83,8 @@ async getIPAddress()
   modalWinner() {
   
     const dialogConfig = new MatDialogConfig();
-    // dialogConfig.disableClose = false;
-
     const dialogRef = this.dialog.open(ModalWinnerComponent, {
       width: '600px',
-      // height: '400px',
       disableClose: false
     });
   }
@@ -94,11 +92,8 @@ async getIPAddress()
   modalMessage2() {
   
     const dialogConfig = new MatDialogConfig();
-    // dialogConfig.disableClose = false;
-
     const dialogRef = this.dialog.open(ModalMessage2Component, {
       width: '600px',
-      // height: '400px',
       disableClose: false
     });
   }
@@ -107,11 +102,8 @@ async getIPAddress()
   modalMessage3() {
   
     const dialogConfig = new MatDialogConfig();
-    // dialogConfig.disableClose = false;
-
     const dialogRef = this.dialog.open(ModalMessage3Component, {
       width: '600px',
-      // height: '400px',
       disableClose: false
     });
   }
@@ -122,12 +114,9 @@ async getIPAddress()
   public surprise(): void {
 
     const canvas = this.renderer2.createElement('canvas');
-
     this.renderer2.appendChild(this.elementRef.nativeElement, canvas);
-
     const myConfetti = confetti.create(canvas, {
       resize: true,
-
     });
 
     myConfetti({
