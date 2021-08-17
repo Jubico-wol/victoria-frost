@@ -10,7 +10,7 @@ import { TastingComponent } from './tasting/tasting.component';
 const routes: Routes = [
   {path:"", component: IndexComponent},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
-  {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
+  // {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
   {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
   {path: "", redirectTo: "/", pathMatch: 'full' },
   { path: "**", redirectTo:  "/" } 
