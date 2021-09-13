@@ -6,6 +6,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalWinnerComponent } from '../modal/modal-winner/modal-winner.component';
 import { ModalMessage2Component } from '../modal/modal-message2/modal-message2.component';
 import { ModalMessage3Component } from '../modal/modal-message3/modal-message3.component';
+import { ModalMuseuComponent } from '../modal/modal-museu/modal-museu.component';
 import { CookieService } from 'ngx-cookie-service';
 import * as confetti from 'canvas-confetti';
 
@@ -39,6 +40,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     // this.getIPAddress();
+
+    // this.modaMuseu();
    
   }
 
@@ -105,6 +108,18 @@ async getIPAddress()
     const dialogRef = this.dialog.open(ModalMessage3Component, {
       width: '600px',
       disableClose: false
+    });
+  }
+
+
+
+  modaMuseu() {
+  
+    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(ModalMuseuComponent, {
+      width: '800px',
+      height: '425px',
+      disableClose: true
     });
   }
 

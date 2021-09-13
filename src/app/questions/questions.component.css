@@ -1,4 +1,60 @@
-canvas {
+.bg{
+    background: url(../../assets/museu/bg-questions.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-light{
+    background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+
+.center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.card{
+    background-color: #ffffff63;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* FOOTER */
+
+   canvas {
     position: absolute;
     top: 0;
     /* height: 100%; */
@@ -487,3 +543,4 @@ a.nav-link:active {
 .navbar-light {
     background: #2bd8f7;
 }
+

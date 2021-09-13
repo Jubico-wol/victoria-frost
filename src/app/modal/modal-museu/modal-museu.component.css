@@ -1,0 +1,31 @@
+.bg{
+    background: url(../../../assets/museu/bg.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+}
+
+
+.w-100{
+    width: 100%;
+}
+.w-75{
+    width: 75%;
+}
+.w-50{
+    width: 50%;
+}
+.pointer{
+    cursor: pointer;
+}
+.imgContainer{
+    position: absolute;
+    top: 50%;
+    left: 77%;
+}
+
+img{
+    max-width:500px;
+    min-width: 90px;
+   } 

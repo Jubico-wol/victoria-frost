@@ -2,7 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { HttpClient , HttpParams} from '@angular/common/http';
+import { HttpClient , HttpParams , HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,9 @@ export class CheckService {
 
   constructor(private cookieService: CookieService, private http:HttpClient ) { }
 
-  headers = new Headers();
+  // headers = new Headers();
+
+   headers= new HttpHeaders().set('content-type', 'application/json').set('Access-Control-Allow-Origin', '*');
   
   url= 'https://solutionsomg.com/api/Frost/promocion/';
 
@@ -24,6 +26,21 @@ export class CheckService {
 
   getPromotionToken(){
     this.cookieService.get('promotion');
+  }
+
+  getMuseuToken(){
+    return this.http.get("https://solutionsomg.com/task/Token/h8F5yZhM");
+  }
+
+  getQuestions(token:any) {
+    this.headers.append("Access-Control-Allow-Methods","GET, POST");
+    this.headers.append("Access-Control-Allow-Origin","*");
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    })
+    const body=JSON.stringify(token);
+    return this.http.post("https://solutionsomg.com/api/Frost/preguntas/", token);
   }
 
   isPromotionIn(){

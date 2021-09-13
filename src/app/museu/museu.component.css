@@ -1,4 +1,56 @@
-canvas {
+.bg{
+    background: url(../../assets/museu/bg.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+}
+
+
+.w-100{
+    width: 100%;
+}
+.w-75{
+    width: 75%;
+}
+.w-50{
+    width: 50%;
+}
+.pointer{
+    cursor: pointer;
+}
+.imgContainer{
+    position: absolute;
+    top: 50%;
+    left: 77%;
+}
+
+.banner{
+    background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* FOOTER */
+
+   canvas {
     position: absolute;
     top: 0;
     /* height: 100%; */
@@ -487,3 +539,4 @@ a.nav-link:active {
 .navbar-light {
     background: #2bd8f7;
 }
+

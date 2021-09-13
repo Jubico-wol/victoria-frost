@@ -23,6 +23,9 @@ import { ModalMessage3Component } from './modal/modal-message3/modal-message3.co
 import { ModalSuccessComponent } from './modal/modal-success/modal-success.component';
 import { ModalErrorComponent } from './modal/modal-error/modal-error.component';
 import { TastingComponent } from './tasting/tasting.component';
+import { MuseuComponent } from './museu/museu.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { ModalMuseuComponent } from './modal/modal-museu/modal-museu.component';
 
 
 
@@ -39,7 +42,10 @@ import { TastingComponent } from './tasting/tasting.component';
     ModalMessage2Component,
     ModalMessage3Component,
     ModalErrorComponent,
-    TastingComponent
+    TastingComponent,
+    MuseuComponent,
+    QuestionsComponent,
+    ModalMuseuComponent
   ],
   imports: [
     BrowserModule,
