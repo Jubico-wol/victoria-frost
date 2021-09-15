@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this._api.removeCookie();
+    localStorage.removeItem('session');
     // this.getIPAddress();
 
     // this.modaMuseu();

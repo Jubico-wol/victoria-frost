@@ -19,7 +19,7 @@ export class QuestionsComponent implements OnInit {
       this.token = localStorage.getItem('token');
       this._api.removeCookie();
       console.log(JSON.stringify(this.token))
-
+      localStorage.removeItem('session');
       this.getQuestions(this.token);
       this._api.removeCookie();
 

@@ -13,7 +13,7 @@ export class MuseuComponent implements OnInit {
 
   ngOnInit(): void {
     this.getToken();
-
+    localStorage.removeItem('session');
     this._api.removeCookie();
 
   }
