@@ -7,23 +7,24 @@ import { HttpClient , HttpParams , HttpHeaders} from '@angular/common/http';
   templateUrl: './questions.component.html',
   styleUrls: ['./questions.component.css']
 })
+
 export class QuestionsComponent implements OnInit {
 
   constructor(private _api:CheckService,  private http:HttpClient ) { }
 
-
   token;
+
   ngOnInit(): void {
 
-   this.token = localStorage.getItem('token');
+      this.token = localStorage.getItem('token');
+      this._api.removeCookie();
+      console.log(JSON.stringify(this.token))
 
-   
-   console.log(JSON.stringify(this.token))
-
-   this.getQuestions(this.token);
-
+      this.getQuestions(this.token);
+      this._api.removeCookie();
 
   }
+
 
 data;
 questions;
@@ -33,10 +34,12 @@ pregunta3;
 pregunta4;
 pregunta5;
 
+
+
   getQuestions(val){
 
     this._api.getQuestions(val).subscribe(data=>{
-      console.log(data[0]);
+      // console.log(data[0]);
       this.data = data ;
       this.pregunta1 = data[0];
       this.pregunta2 = data[1];
@@ -45,29 +48,71 @@ pregunta5;
       this.pregunta5 = data[4];
       this.questions = this.data.Pregunta;
     });
-
-
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/json',
-    //   'Authorization': `Token ${val}`
-    // })
-
-    // let x = this.http.post("https://solutionsomg.com/api/Frost/preguntas/", {headers: headers}) ;
-    // console.log(headers)
-    // console.log(x)
-    // return x ;
-
-
   }
+
+
+
+  checkedIDs = [];
+  
+  p1:any;
+  p2:any;
+
+
+  changeSelection($event:any, name:any, next:any) {
+    
+    this.checkedIDs = []
+
   
 
 
+    // console.log(this.checkedIDs);
+
+    const id = $event.target.value;
+    // console.log(name, $event.target.value);
+    // console.log($event);
+
+
+    this.p1={
+      pregunta: name,
+      respuesta: $event.target.value
+    }
+
+
+
+    this.checkedIDs.push(this.p1);
+
+
+
+    var a = [];
+    // Parse the serialized data back into an aray of objects
+    a = JSON.parse(localStorage.getItem('session')) || [];
+    // Push the new data (whether it be an object or anything else) onto the array
+    a.push(this.p1);
+    // Alert the array value
+    // alert(a);  // Should be something like [Object array]
+    // Re-serialize the array back into a string and store it in localStorage
+    localStorage.setItem('session', JSON.stringify(a));
+
+
+
+    this.next(next);
+
+
+
+  }
 
   flag1= true;
   flag2= false;
   flag3= false;
   flag4= false;
   flag5= false;
+  flagMesssage= false;
+  flagMessageError= false;
+  messageData;
+  winnerMessage1;
+  winnerMessage2;
+  errorMessage1;
+  errorMessage2;
 
   next(val){
 
@@ -108,11 +153,45 @@ pregunta5;
 
       
     if(val==0){
+      this.flag1= false;
+      this.flag2= false;
+      this.flag3= false;
+      this.flag4= false;
+      this.flag5= false;
+  
 
+      let obj = JSON.parse(localStorage.getItem('session'));
+
+      this._api.getResultQuestions(obj).subscribe(data=>{
+
+        this.data = data ;
+        this.messageData = this.data;
+
+
+
+
+        if(this.messageData.ganador == true){
+          this.flagMesssage= true;
+          let val = "MuseuBarca";
+          this._api.promotionCookieSet(val);
+        }
+
+        
+        if(this.messageData.ganador == false){
+          this.flagMessageError= true;
+          this.errorMessage1 = "HAS FALLADO!"
+          this.errorMessage2 = "VUELVE A INTENTARLO"
+        }
+
+
+
+
+        // console.log(data);
+
+      });
 
       
     }
-
 
 
 

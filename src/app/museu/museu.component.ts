@@ -12,7 +12,9 @@ export class MuseuComponent implements OnInit {
   constructor( private _api:CheckService) { }
 
   ngOnInit(): void {
-this.getToken();
+    this.getToken();
+
+    this._api.removeCookie();
 
   }
 

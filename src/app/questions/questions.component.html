@@ -2,7 +2,7 @@
     
     <section>
       <div class="container-fluid">
-          <div class="row menu" style="background-color:#2BD8F7; height: 61px;">
+          <div class="row menu" style="background-color:#2BD8F7; height: 61px; z-index: 2;">
               <div class="col-sm-2 col-md-2 col-lg-2 p-0">
                   <img style="float: left;max-width: 155px;" src="../../assets/home_page/header/Top_Header_Esquina_1_Logo.png">
                   <img style="position: absolute; width: 40px;left: 8%;top: 2%;" src="../../assets/home_page/header/LOGO V.png">
@@ -84,21 +84,19 @@
 
     <div class="container"  style="max-width: 800px;">
 
-        <!-- <img *ngIf="flag1" src="../../assets/museu/PREGUNTAS-1.png" class="w-50 pointer" alt="" (click)="next(2)">
 
-        <img *ngIf="flag2" src="../../assets/museu/PREGUNTAS-2.png" class="w-50 pointer" alt="" (click)="next(3)">
 
-        <img *ngIf="flag3" src="../../assets/museu/PREGUNTAS-1.png" class="w-50 pointer" alt="" (click)="next(4)">
-
-        <img *ngIf="flag4" src="../../assets/museu/PREGUNTAS-2.png" class="w-50 pointer" alt="" (click)="next(5)">
-
-        <img *ngIf="flag5" src="../../assets/museu/PREGUNTAS-1.png" class="w-50 pointer" alt="" (click)="next(0)"> -->
- 
-      
-
-        <img class="w-100" src="../../assets/museu/titulo-pregunta-vf-barca.png" alt="">
+      <img [hidden]="flagMesssage"  class="w-100 imgInit" src="../../assets/museu/titulo-pregunta-vf-barca.png" alt="">
+       
         
-        <div *ngIf="flag1" class="card" >
+
+
+
+
+
+
+
+          <div *ngIf="flag1" class="card animate__animated animate__backInRight">
 
             <div  class="card-body">
               <div class="container center">
@@ -106,11 +104,45 @@
                   <div class="col-md-6"><h1>{{pregunta1.Pregunta}}</h1></div>
                   <div class="col-md-6">
                     
-                    <ul>
-                      <li><input type="radio" name="" id="" (click)="next(2)"> <label for=""></label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(2)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(2)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(2)"> <label for="">test</label> </li>
+                    <ul class="answer">
+                     
+                      <li>      
+                        <input type="radio" id="checkbox1" name="quiz" class="checkbox"
+                        [value]="pregunta1.respuesta1" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        <label for="checkbox1" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                            {{pregunta1.respuesta1}}
+                        </label>
+                      </li>
+                    
+                      <li>      
+                        <input type="radio" id="checkbox2" name="quiz" class="checkbox"
+                        [value]="pregunta1.respuesta2" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        <label for="checkbox2" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta1.respuesta2}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="radio" id="checkbox3" name="quiz" class="checkbox"
+                        [value]="pregunta1.respuesta3" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        
+                        <label for="checkbox3" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta1.respuesta3}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="radio" id="checkbox4" name="quiz" class="checkbox" 
+                        [value]="pregunta1.respuesta4" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        <label for="checkbox4" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta1.respuesta4}}
+                        </label>
+                      </li>
+                  
                     </ul>
 
                   </div>
@@ -120,21 +152,55 @@
 
           </div>
 
-
-
-          <div *ngIf="flag2" class="card" >
+          <div *ngIf="flag2" class="card animate__animated animate__backInRight">
 
             <div  class="card-body">
               <div class="container center">
                 <div class="row">
                   <div class="col-md-6"><h1>{{pregunta2.Pregunta}}</h1></div>
                   <div class="col-md-6">
-                    <ul>
-                      <li><input type="radio" name="" id="" (click)="next(3)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(3)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(3)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(3)"> <label for="">test</label> </li>
+                  
+                    
+                    <ul class="answer">
+                     
+                      <li>      
+                        <input type="checkbox" id="checkbox1" class="checkbox" name="quiz"
+                        [value]="pregunta2.respuesta1" (change)="changeSelection($event, pregunta2.Pregunta,3)">
+                        <label for="checkbox1" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta2.respuesta1}}
+                        </label>
+                      </li>
+                    
+                      <li>      
+                        <input type="checkbox" id="checkbox2" class="checkbox" name="quiz"
+                        [value]="pregunta2.respuesta2" (change)="changeSelection($event, pregunta2.Pregunta,3)">
+                        <label for="checkbox2" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta2.respuesta2}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox3" class="checkbox"  name="quiz"
+                        [value]="pregunta2.respuesta3" (change)="changeSelection($event, pregunta2.Pregunta,3)">
+                        <label for="checkbox3" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta2.respuesta3}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox4" class="checkbox" name="quiz"
+                        [value]="pregunta2.respuesta4" (change)="changeSelection($event, pregunta2.Pregunta,3)">
+                        <label for="checkbox4" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta2.respuesta4}}
+                        </label>
+                      </li>
+                  
                     </ul>
+
                   </div>
                 </div>
               </div>
@@ -142,20 +208,56 @@
 
           </div>
 
-
-          <div *ngIf="flag3" class="card" >
+          <div *ngIf="flag3" class="card animate__animated animate__backInRight">
 
             <div  class="card-body">
               <div class="container center">
                 <div class="row">
                   <div class="col-md-6"><h1>{{pregunta3.Pregunta}}</h1></div>
                   <div class="col-md-6">
-                    <ul>
-                      <li><input type="radio" name="" id="" (click)="next(4)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(4)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(4)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(4)"> <label for="">test</label> </li>
+                
+                    
+                    <ul class="answer">
+                     
+                      <li>      
+                        <input type="checkbox" id="checkbox1" class="checkbox" name="quiz"
+                        [value]="pregunta3.respuesta1" (change)="changeSelection($event, pregunta3.Pregunta,4)">
+                        <label for="checkbox1" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta3.respuesta1}}
+                        </label>
+                      </li>
+                    
+                      <li>      
+                        <input type="checkbox" id="checkbox2" class="checkbox" name="quiz"
+                        [value]="pregunta3.respuesta2" (change)="changeSelection($event, pregunta3.Pregunta,4)">
+                        <label for="checkbox2" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta3.respuesta2}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox3" class="checkbox" name="quiz"
+                        [value]="pregunta3.respuesta3" (change)="changeSelection($event, pregunta3.Pregunta,4)">
+                        <label for="checkbox3" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta3.respuesta3}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox4" class="checkbox" name="quiz"
+                        [value]="pregunta3.respuesta4" (change)="changeSelection($event, pregunta3.Pregunta,4)">
+                        <label for="checkbox4" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta3.respuesta4}}
+                        </label>
+                      </li>
+                  
                     </ul>
+
+
                   </div>
                 </div>
               </div>
@@ -163,20 +265,55 @@
 
           </div>
 
-
-          <div *ngIf="flag4" class="card" >
+          <div *ngIf="flag4" class="card animate__animated animate__backInRight">
 
             <div  class="card-body">
               <div class="container center">
                 <div class="row">
                   <div class="col-md-6"><h1>{{pregunta4.Pregunta}}</h1></div>
                   <div class="col-md-6">
-                    <ul>
-                      <li><input type="radio" name="" id="" (click)="next(5)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(5)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(5)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(5)"> <label for="">test</label> </li>
+               
+                    
+                    <ul class="answer">
+                     
+                      <li>      
+                        <input type="checkbox" id="checkbox1" class="checkbox" name="quiz"
+                        [value]="pregunta4.respuesta1" (change)="changeSelection($event, pregunta4.Pregunta,5)">
+                        <label for="checkbox1" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta4.respuesta1}}
+                        </label>
+                      </li>
+                    
+                      <li>      
+                        <input type="checkbox" id="checkbox2" class="checkbox" name="quiz"
+                        [value]="pregunta4.respuesta2" (change)="changeSelection($event, pregunta4.Pregunta,5)">
+                        <label for="checkbox2" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta4.respuesta2}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox3" class="checkbox" name="quiz"
+                        [value]="pregunta4.respuesta3" (change)="changeSelection($event, pregunta4.Pregunta,5)">
+                        <label for="checkbox3" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta4.respuesta3}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox4" class="checkbox" name="quiz"
+                        [value]="pregunta4.respuesta4" (change)="changeSelection($event, pregunta4.Pregunta,5)">
+                        <label for="checkbox4" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta4.respuesta4}}
+                        </label>
+                      </li>
+                  
                     </ul>
+
                   </div>
                 </div>
               </div>
@@ -184,22 +321,56 @@
 
           </div>
 
-
-
-
-          <div *ngIf="flag5" class="card" >
+          <div *ngIf="flag5" class="card animate__animated animate__backInRight">
 
             <div  class="card-body">
               <div class="container center">
                 <div class="row">
                   <div class="col-md-6"><h1>{{pregunta5.Pregunta}}</h1></div>
                   <div class="col-md-6">
-                    <ul>
-                      <li><input type="radio" name="" id="" (click)="next(0)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(0)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(0)"> <label for="">test</label> </li>
-                      <li><input type="radio" name="" id="" (click)="next(0)"> <label for="">test</label> </li>
+              
+                    
+                    <ul class="answer">
+                     
+                      <li>      
+                        <input type="checkbox" id="checkbox1" class="checkbox" name="quiz"
+                        [value]="pregunta5.respuesta1" (change)="changeSelection($event, pregunta4.Pregunta,0)">
+                        <label for="checkbox1" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta5.respuesta1}}
+                        </label>
+                      </li>
+                    
+                      <li>      
+                        <input type="checkbox" id="checkbox2" class="checkbox"  name="quiz"
+                        [value]="pregunta5.respuesta2" (change)="changeSelection($event, pregunta4.Pregunta,0)">
+                        <label for="checkbox2" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta5.respuesta2}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox3" class="checkbox" name="quiz"
+                        [value]="pregunta5.respuesta3" (change)="changeSelection($event, pregunta4.Pregunta,0)">
+                        <label for="checkbox3" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta5.respuesta3}}
+                        </label>
+                      </li>
+
+                      <li>      
+                        <input type="checkbox" id="checkbox4" class="checkbox"  name="quiz"
+                        [value]="pregunta5.respuesta4" (change)="changeSelection($event, pregunta4.Pregunta,0)">
+                        <label for="checkbox4" class="checkbox-label">
+                          <span class="checkbox-span"></span>
+                          {{pregunta5.respuesta4}}
+                        </label>
+                      </li>
+                  
                     </ul>
+
+
                   </div>
                 </div>
               </div>
@@ -210,10 +381,81 @@
 
 
 
-    </div>
 
 
 
+
+
+
+
+
+
+          <img *ngIf="flagMesssage" class="w-100 imgWin" src="../../assets/museu/winnerLetter.png">
+
+          <div *ngIf="flagMesssage" class="card animate__animated animate__backInRight">
+
+            <div  class="card-body">
+              <div class="container center">
+                <div class="row">
+            
+                  <div class="col-md-12">
+                    <img class="w-100" src="../../assets/museu/formLetters.png" alt="">
+                  </div>
+
+                  <div class="col-md-12">
+                  <button class="btn btn-danger" routerLink="/museu/premio"> Aceptar</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div *ngIf="flagMessageError" class="card animate__animated animate__backInRight">
+
+            <div  class="card-body">
+              <div class="container center">
+                <div class="row">
+            
+                  <div class="col-md-12">
+                    <h3 class="white">{{errorMessage1}}</h3>
+                    <h3 class="yellow">{{errorMessage2}}</h3>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button class="btn btn-danger" routerLink="/home"> Aceptar</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          
+
+
+
+
+
+    
+
+
+
+  
+
+
+
+
+
+
+
+  </div>
 </div>
 
 

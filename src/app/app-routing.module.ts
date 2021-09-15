@@ -16,6 +16,7 @@ const routes: Routes = [
   {path:"museu", component:MuseuComponent, canActivate: [CanAccessGuard]},
   {path:"museu/preguntas", component:QuestionsComponent, canActivate: [CanAccessGuard]},
   {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
+  {path:"museu/premio", component:WinformComponent , canActivate: [PromotionGuard]},
   {path: "", redirectTo: "/", pathMatch: 'full' },
   { path: "**", redirectTo:  "/" } 
 ];

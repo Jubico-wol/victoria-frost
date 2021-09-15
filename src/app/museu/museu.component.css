@@ -7,6 +7,19 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+    .bg{
+        background: url(../../assets/museu/bgMcc.png);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+    }
+}
+
+
+
+
 .w-100{
     width: 100%;
 }

@@ -8,7 +8,7 @@ import { ModalMessage2Component } from '../modal/modal-message2/modal-message2.c
 import { ModalMessage3Component } from '../modal/modal-message3/modal-message3.component';
 import { ModalMuseuComponent } from '../modal/modal-museu/modal-museu.component';
 import { CookieService } from 'ngx-cookie-service';
-import * as confetti from 'canvas-confetti';
+
 
 
 
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
+    this._api.removeCookie();
     // this.getIPAddress();
 
     // this.modaMuseu();
@@ -122,32 +122,6 @@ async getIPAddress()
       disableClose: true
     });
   }
-
-
-
-
-  public surprise(): void {
-
-    const canvas = this.renderer2.createElement('canvas');
-    this.renderer2.appendChild(this.elementRef.nativeElement, canvas);
-    const myConfetti = confetti.create(canvas, {
-      resize: true,
-    });
-
-    myConfetti({
-      particleCount: 100,
-      spread: 160
-
-    });
-
-    myConfetti();
-
-    this.clicked = false;
-
-  }
-
-
-
 
 
 

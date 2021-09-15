@@ -24,9 +24,12 @@ export class CheckService {
     return !!this.cookieService.get('ASkjfwuihJKFH');
   }
 
-  getPromotionToken(){
-    this.cookieService.get('promotion');
-  }
+ 
+
+
+
+
+  // api BARCA
 
   getMuseuToken(){
     return this.http.get("https://solutionsomg.com/task/Token/h8F5yZhM");
@@ -43,9 +46,31 @@ export class CheckService {
     return this.http.post("https://solutionsomg.com/api/Frost/preguntas/", token);
   }
 
+  getResultQuestions(obj:any){
+    return this.http.post("https://solutionsomg.com/api/Frost/preguntas/2", obj);
+  }
+
+
+
+
+
+
+// API PROMOTION BEER FOR FREE
+
+  getPromotionToken(){
+    this.cookieService.get('promotion');
+  }
+
+  removeCookie(){
+    this.cookieService.delete('promotion');
+  }
+  promotionCookieSet(obj){
+    this.cookieService.set('promotion',obj);
+  }
   isPromotionIn(){
     return !!this.cookieService.get('promotion');
   }
+
 
   async getPromotion(ip){
     this.headers.append("Access-Control-Allow-Methods","GET, POST");

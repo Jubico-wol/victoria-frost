@@ -7,6 +7,9 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalErrorComponent } from '../modal/modal-error/modal-error.component';
 import { ModalSuccessComponent } from '../modal/modal-success/modal-success.component';
 import { FormControl, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MuseuModalSuccessComponent } from '../modal/museu-modal-success/museu-modal-success.component';
+import { MuseuModalErrorComponent } from '../modal/museu-modal-error/museu-modal-error.component';
 
 
 @Component({
@@ -22,13 +25,14 @@ export class WinformComponent implements OnInit {
     private viewportScroller: ViewportScroller, 
     private cookieService: CookieService, 
     public matDialog: MatDialog, 
+    private route: Router,
     public dialog: MatDialog
   ) { this.contactForm = this.createForm(); }
 
   ngOnInit(): void {
-    if(!this._api.isPromotionIn()){
-      window.location.reload(true);
-    }
+    // if(!this._api.isPromotionIn()){
+    //   window.location.reload();
+    // }
   }
 
   public onClick(elementId: string): void { 
@@ -80,22 +84,33 @@ export class WinformComponent implements OnInit {
 
       this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
         this.ipAddress = res.ip;
+        console.log(this.ipAddress);
           this._api.postPromotion(this.ipAddress,this.data).subscribe(data=>{      
             this.result = data;
             this.success = this.result.result;
-         
-            this.cookieService.delete('promotion', '/');
-            this.modalSuccess();
+            console.log(data);
+            this.cookieService.delete('promotion');
 
+            this.museuModalSuccess();
+            // this.modalSuccess();
           },(error =>{
    
             this.result = error;
             this.err = this.result.error;
             this.error = this.err.result;
-        
-            this.modalError();
+            this.museuModalError();
+            // this.modalError();
           }));
         });
+
+
+
+
+
+    
+
+
+
     }
   }
 
@@ -114,6 +129,30 @@ export class WinformComponent implements OnInit {
       disableClose: true
     });
   }
+
+
+
+
+
+
+  museuModalError() {
+    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(MuseuModalErrorComponent, {
+      width: '600px',
+      disableClose: true
+    });
+  }
+
+  museuModalSuccess() {
+    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(MuseuModalSuccessComponent, {
+      width: '600px',
+      disableClose: true
+    });
+  }
+
+
+
 
 
 }

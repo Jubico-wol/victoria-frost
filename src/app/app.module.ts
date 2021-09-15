@@ -26,6 +26,9 @@ import { TastingComponent } from './tasting/tasting.component';
 import { MuseuComponent } from './museu/museu.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ModalMuseuComponent } from './modal/modal-museu/modal-museu.component';
+import { MuseuModalErrorComponent } from './modal/museu-modal-error/museu-modal-error.component';
+import { MuseuModalSuccessComponent } from './modal/museu-modal-success/museu-modal-success.component';
+
 
 
 
@@ -45,7 +48,9 @@ import { ModalMuseuComponent } from './modal/modal-museu/modal-museu.component';
     TastingComponent,
     MuseuComponent,
     QuestionsComponent,
-    ModalMuseuComponent
+    ModalMuseuComponent,
+    MuseuModalErrorComponent,
+    MuseuModalSuccessComponent
   ],
   imports: [
     BrowserModule,
