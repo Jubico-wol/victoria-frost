@@ -39,7 +39,7 @@ pregunta5;
   getQuestions(val){
 
     this._api.getQuestions(val).subscribe(data=>{
-      // console.log(data[0]);
+      console.log(data);
       this.data = data ;
       this.pregunta1 = data[0];
       this.pregunta2 = data[1];

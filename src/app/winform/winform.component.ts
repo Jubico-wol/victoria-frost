@@ -33,6 +33,7 @@ export class WinformComponent implements OnInit {
     // if(!this._api.isPromotionIn()){
     //   window.location.reload();
     // }
+    localStorage.removeItem('session');
   }
 
   public onClick(elementId: string): void { 
