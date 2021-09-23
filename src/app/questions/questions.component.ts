@@ -18,12 +18,19 @@ export class QuestionsComponent implements OnInit {
 
       this.token = localStorage.getItem('token');
       this._api.removeCookie();
-      console.log(JSON.stringify(this.token))
+      // console.log(JSON.stringify(this.token));
       localStorage.removeItem('session');
       this.getQuestions(this.token);
       this._api.removeCookie();
 
   }
+
+
+ipAddress = '';
+result;
+success;
+err;
+error;
 
 
 data;
@@ -35,19 +42,56 @@ pregunta4;
 pregunta5;
 
 
+ip;
+ipFlag=false;
+
+
 
   getQuestions(val){
 
-    this._api.getQuestions(val).subscribe(data=>{
-      console.log(data);
-      this.data = data ;
-      this.pregunta1 = data[0];
-      this.pregunta2 = data[1];
-      this.pregunta3 = data[2];
-      this.pregunta4 = data[3];
-      this.pregunta5 = data[4];
-      this.questions = this.data.Pregunta;
-    });
+
+      this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
+          this.ipAddress = res.ip;
+          // console.log(this.ipAddress);
+
+          this._api.getQuestionsByIP(this.ipAddress, val).subscribe(data =>{
+        
+              this.data = data ;
+              this.ip = this.data.result;
+          
+
+              // console.log(this.ip);
+
+              if(this.ip == 'ip no valida'){
+               
+                this.flag1= false;
+                this.flag2= false;
+                this.flag3= false;
+                this.flag4= false;
+                this.flag5= false;
+                this.flagMesssage = false;
+                this.flagMessageError= false;
+                this.ipFlag=true;
+
+              }else{
+
+                this.pregunta1 = data[0];
+                this.pregunta2 = data[1];
+                this.pregunta3 = data[2];
+                this.pregunta4 = data[3];
+                this.pregunta5 = data[4];
+                this.questions = this.data.Pregunta;
+
+              }
+
+
+
+
+          })
+
+
+      })
+
   }
 
 

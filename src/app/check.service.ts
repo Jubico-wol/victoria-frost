@@ -35,22 +35,25 @@ export class CheckService {
     return this.http.get("https://solutionsomg.com/task/Token/h8F5yZhM");
   }
 
-  getQuestions(token:any) {
-    this.headers.append("Access-Control-Allow-Methods","GET, POST");
-    this.headers.append("Access-Control-Allow-Origin","*");
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    })
-    const body=JSON.stringify(token);
-    return this.http.post("https://solutionsomg.com/api/Frost/preguntas/", token);
-  }
+  // getQuestions(token:any) {
+  //   this.headers.append("Access-Control-Allow-Methods","GET, POST");
+  //   this.headers.append("Access-Control-Allow-Origin","*");
+  //   const headers = new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     'Authorization': `Bearer ${token}`
+  //   })
+  //   const body=JSON.stringify(token);
+  //   return this.http.post("https://solutionsomg.com/api/Frost/preguntas/", token);
+  // }
 
   getResultQuestions(obj:any){
     return this.http.post("https://solutionsomg.com/api/Frost/preguntas/2", obj);
   }
 
 
+  getQuestionsByIP(ip, data){
+    return this.http.post("https://solutionsomg.com/api/Frost/preguntas/" +ip, data);
+  }
 
 
 

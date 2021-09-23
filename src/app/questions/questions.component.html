@@ -101,45 +101,45 @@
             <div  class="card-body">
               <div class="container center">
                 <div class="row">
-                  <div class="col-md-6"><h1>{{pregunta1.Pregunta}}</h1></div>
+                  <div class="col-md-6"><h1>{{pregunta1?.Pregunta}}</h1></div>
                   <div class="col-md-6">
                     
                     <ul class="answer">
                      
                       <li>      
                         <input type="radio" id="checkbox1" name="quiz" class="checkbox"
-                        [value]="pregunta1.respuesta1" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        [value]="pregunta1?.respuesta1" (change)="changeSelection($event, pregunta1.Pregunta,2)">
                         <label for="checkbox1" class="checkbox-label">
                           <span class="checkbox-span"></span>
-                            {{pregunta1.respuesta1}}
+                            {{pregunta1?.respuesta1}}
                         </label>
                       </li>
                     
                       <li>      
                         <input type="radio" id="checkbox2" name="quiz" class="checkbox"
-                        [value]="pregunta1.respuesta2" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        [value]="pregunta1?.respuesta2" (change)="changeSelection($event, pregunta1.Pregunta,2)">
                         <label for="checkbox2" class="checkbox-label">
                           <span class="checkbox-span"></span>
-                          {{pregunta1.respuesta2}}
+                          {{pregunta1?.respuesta2}}
                         </label>
                       </li>
 
                       <li>      
                         <input type="radio" id="checkbox3" name="quiz" class="checkbox"
-                        [value]="pregunta1.respuesta3" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        [value]="pregunta1?.respuesta3" (change)="changeSelection($event, pregunta1.Pregunta,2)">
                         
                         <label for="checkbox3" class="checkbox-label">
                           <span class="checkbox-span"></span>
-                          {{pregunta1.respuesta3}}
+                          {{pregunta1?.respuesta3}}
                         </label>
                       </li>
 
                       <li>      
                         <input type="radio" id="checkbox4" name="quiz" class="checkbox" 
-                        [value]="pregunta1.respuesta4" (change)="changeSelection($event, pregunta1.Pregunta,2)">
+                        [value]="pregunta1?.respuesta4" (change)="changeSelection($event, pregunta1.Pregunta,2)">
                         <label for="checkbox4" class="checkbox-label">
                           <span class="checkbox-span"></span>
-                          {{pregunta1.respuesta4}}
+                          {{pregunta1?.respuesta4}}
                         </label>
                       </li>
                   
@@ -438,6 +438,29 @@
           </div>
             
           
+
+
+          
+          <div *ngIf="ipFlag" class="card animate__animated animate__backInRight">
+
+            <div  class="card-body">
+              <div class="container center">
+                <div class="row">
+            
+                  <div class="col-md-12">
+                    <h3 class="white">Lo sentimos!!</h3>
+                    <h3 class="yellow">Recuerda volver a jugar al dia siguente.</h3>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button class="btn btn-danger" routerLink="/home"> Aceptar</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+            
 
 
 

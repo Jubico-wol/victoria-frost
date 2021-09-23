@@ -28,6 +28,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { ModalMuseuComponent } from './modal/modal-museu/modal-museu.component';
 import { MuseuModalErrorComponent } from './modal/museu-modal-error/museu-modal-error.component';
 import { MuseuModalSuccessComponent } from './modal/museu-modal-success/museu-modal-success.component';
+import { ModalWaitingComponent } from './modal/modal-waiting/modal-waiting.component';
 
 
 
@@ -50,7 +51,8 @@ import { MuseuModalSuccessComponent } from './modal/museu-modal-success/museu-mo
     QuestionsComponent,
     ModalMuseuComponent,
     MuseuModalErrorComponent,
-    MuseuModalSuccessComponent
+    MuseuModalSuccessComponent,
+    ModalWaitingComponent
   ],
   imports: [
     BrowserModule,

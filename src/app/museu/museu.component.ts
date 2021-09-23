@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CheckService } from '../check.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { CheckService } from '../check.service';
 })
 export class MuseuComponent implements OnInit {
 
-  constructor( private _api:CheckService) { }
+  constructor( private _api:CheckService, private cookieService: CookieService ) { }
 
   ngOnInit(): void {
     this.getToken();
@@ -32,6 +33,7 @@ token;
         localStorage.setItem('token', this.token);
       });
   }
+
 
 
 

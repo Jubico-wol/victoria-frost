@@ -13,10 +13,17 @@ const routes: Routes = [
   {path:"", component: IndexComponent},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
   // {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
+  // {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
+
   {path:"museu", component:MuseuComponent, canActivate: [CanAccessGuard]},
   {path:"museu/preguntas", component:QuestionsComponent, canActivate: [CanAccessGuard]},
-  {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
   {path:"museu/premio", component:WinformComponent , canActivate: [PromotionGuard]},
+
+
+  // {path:"museu/preguntas/qr", component:QuestionsComponent, canActivate: [CanAccessGuard]},
+  
+
+ 
   {path: "", redirectTo: "/", pathMatch: 'full' },
   { path: "**", redirectTo:  "/" } 
 ];

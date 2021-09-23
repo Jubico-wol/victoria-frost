@@ -104,16 +104,11 @@ export class WinformComponent implements OnInit {
           }));
         });
 
-
-
-
-
-    
-
-
-
     }
   }
+
+
+
 
   modalError() {
     const dialogConfig = new MatDialogConfig();
