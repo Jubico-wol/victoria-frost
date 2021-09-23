@@ -224,7 +224,7 @@ ipFlag=false;
         if(this.messageData.ganador == false){
           this.flagMessageError= true;
           this.errorMessage1 = "HAS FALLADO!"
-          this.errorMessage2 = "VUELVE A INTENTARLO"
+          this.errorMessage2 = "VUELVE A INTENTARLO EL DÍA DE MAÑANA"
         }
 
 
