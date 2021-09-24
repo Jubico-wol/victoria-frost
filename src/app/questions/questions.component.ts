@@ -54,7 +54,7 @@ ipFlag=false;
           this.ipAddress = res.ip;
           // console.log(this.ipAddress);
 
-          this._api.getQuestionsByIP(this.ipAddress, val).subscribe(data =>{
+          this._api.getQuestionsByIP("0.10.10.3", val).subscribe(data =>{
         
               this.data = data ;
               this.ip = this.data.result;

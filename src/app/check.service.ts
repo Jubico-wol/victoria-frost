@@ -76,15 +76,21 @@ export class CheckService {
 
 
   async getPromotion(ip){
+
+    
     this.headers.append("Access-Control-Allow-Methods","GET, POST");
     this.headers.append("Access-Control-Allow-Origin","*");
     return  this.http.get( this.url+ip)
   }
 
   postPromotion(ip, data){
+
+  let promo = JSON.parse(localStorage.getItem('promo'));
+  let tipo =  promo.promo;
+
   this.headers.append("Access-Control-Allow-Methods","GET, POST");
   this.headers.append("Access-Control-Allow-Origin","*");
-    return this.http.post(this.url+ip ,data);
+  return this.http.post(this.url+ ip + tipo, data);
   }
 
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal/modal.component';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -15,10 +16,25 @@ export class IndexComponent implements OnInit {
   constructor(
     private router: Router,  
     private cookieService: CookieService,
+    private route: ActivatedRoute ,
     public matDialog: MatDialog, 
     public dialog: MatDialog ) { }
 
-  ngOnInit(): void {}
+
+
+
+    sub;    
+  ngOnInit(): void {
+
+
+    this.sub = this.route.data.subscribe((data) => {
+      // console.log(data);
+      localStorage.setItem('promo', JSON.stringify(data));
+    });
+
+
+    
+  }
 
   day:any;
   month:any;

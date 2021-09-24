@@ -29,12 +29,25 @@ export class WinformComponent implements OnInit {
     public dialog: MatDialog
   ) { this.contactForm = this.createForm(); }
 
+promoType;
+
+
   ngOnInit(): void {
     // if(!this._api.isPromotionIn()){
     //   window.location.reload();
     // }
+
+    
     localStorage.removeItem('session');
+
+
+
+    // console.log(this.contactForm.value)
+    this.data = JSON.parse(localStorage.getItem('promo'));
+    this.promoType = this.data.promo;
+    // console.log(this.promoType)
   }
+
 
   public onClick(elementId: string): void { 
      this.viewportScroller.scrollToAnchor(elementId);
@@ -60,7 +73,7 @@ export class WinformComponent implements OnInit {
       Email:      new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern(this.emailPattern)]),
       CUI:        new FormControl('', [Validators.required, Validators.minLength(14), CuiValidator.validarCedula]),
       telefono:   new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(8), Validators.pattern(this.onlyNumbers)]),
-      Direccion:  new FormControl('', [Validators.required, Validators.minLength(3)]),
+      Direccion:  new FormControl('', [Validators.required, Validators.minLength(3)])
     });
   }
 
@@ -83,16 +96,29 @@ export class WinformComponent implements OnInit {
       this.contactForm.value
       this.data = this.contactForm.value;
 
+      
+
       this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
         this.ipAddress = res.ip;
         console.log(this.ipAddress);
           this._api.postPromotion(this.ipAddress,this.data).subscribe(data=>{      
             this.result = data;
             this.success = this.result.result;
-            console.log(data);
-            this.cookieService.delete('promotion');
+            // console.log(this.success);
+            // console.log(data);
 
-            this.museuModalSuccess();
+              if(this.success == "error"){ 
+                this.museuModalError();
+              }else{
+                this.cookieService.delete('promotion');
+                localStorage.removeItem('promo');
+                this.museuModalSuccess();
+              }
+
+
+      
+
+
             // this.modalSuccess();
           },(error =>{
    
@@ -100,6 +126,8 @@ export class WinformComponent implements OnInit {
             this.err = this.result.error;
             this.error = this.err.result;
             this.museuModalError();
+            this.cookieService.delete('promotion');
+            localStorage.removeItem('promo');
             // this.modalError();
           }));
         });

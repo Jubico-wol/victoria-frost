@@ -10,8 +10,14 @@ import { MuseuComponent} from './museu/museu.component';
 import { QuestionsComponent } from './questions/questions.component'; 
 
 const routes: Routes = [
-  {path:"", component: IndexComponent},
+  {path:"", component: IndexComponent, data : {promo: 'normal'}},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
+
+
+  {path:"promo", component: IndexComponent, data : {promo : 'camisas'}},
+//data : {some_data : 'some value'}
+
+
   // {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
   // {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
 
