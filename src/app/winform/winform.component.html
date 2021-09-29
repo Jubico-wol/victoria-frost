@@ -74,7 +74,7 @@
         <input type="text"  formControlName="Nombre" placeholder="Nombre completo"/>
         <input type="text" formControlName="Apellido" name="apellido" placeholder="Apellidos"/>
 
-        <input type="text" formControlName="CUI" placeholder="CUI" minlength="14"  maxlength="14"/>
+        <input type="text" formControlName="CUI" placeholder="Cédula" minlength="14"  maxlength="14"/>
         
         <div class="alert-danger" *ngIf="CUI.invalid && (CUI.dirty || CUI.touched)">
           <div class="container-error-message" *ngIf="CUI.errors.required || !CUI.errors.validarCedula">CUI es requerido.</div>

@@ -41,6 +41,7 @@ label{
 .yellow{
     color:#FFC940;
 }
+.black{ color: #000000; }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border: 5px solid #00205b;
@@ -75,9 +76,12 @@ label{
 }
 
 
-/* check box */
 
 
+
+.h1, h1 {
+    font-size: calc(1.2rem + 0.9vw);
+}
 
 
 

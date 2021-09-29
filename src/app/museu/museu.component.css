@@ -49,6 +49,51 @@
 
 
 
+@media 
+  (max-device-width: 800px)
+  and (max-device-height: 1280px) { 
+
+    .bg{
+        background: url(../../assets/museu/bgMcc.png);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+    }
+
+   }
+
+
+
+   @media 
+   (max-device-width: 375px)
+   and (max-device-height: 812px) { 
+ 
+     .bg{
+         background: url(../../assets/museu/iphoneBG.png);
+         height: 100vh;
+         background-repeat: no-repeat;
+         background-size: cover;
+         object-fit: contain;
+     }
+ 
+    }
+ 
+
+    /* @media 
+    (max-device-width: 1024px)
+    and (max-device-height: 1366px) { 
+  
+      .bg{
+          background: url(../../assets/museu/bgIpad.jpg);
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          object-fit: contain;
+      }
+  
+     } */
+
 
 
 
