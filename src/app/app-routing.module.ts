@@ -21,10 +21,10 @@ const routes: Routes = [
 
 
 
-  // {path:"promo", component: IndexComponent, data : {promo : 'camisas'}},
-  // {path:"museu", component:MuseuComponent, canActivate: [CanAccessGuard]},
-  // {path:"museu/preguntas", component:QuestionsComponent, canActivate: [CanAccessGuard]},
-  // {path:"museu/premio", component:WinformComponent , canActivate: [PromotionGuard]},
+  {path:"promo", component: IndexComponent, data : {promo : 'camisas'}},
+  {path:"museu", component:MuseuComponent, canActivate: [CanAccessGuard]},
+  {path:"museu/preguntas", component:QuestionsComponent, canActivate: [CanAccessGuard]},
+  {path:"museu/premio", component:WinformComponent , canActivate: [PromotionGuard]},
 
   // {path:"museu/preguntas/qr", component:QuestionsComponent, canActivate: [CanAccessGuard]},
   
