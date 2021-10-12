@@ -8,7 +8,7 @@ import { PromotionGuard } from './guards/promotion.guard';
 import { TastingComponent } from './tasting/tasting.component';
 import { MuseuComponent} from './museu/museu.component';
 import { QuestionsComponent } from './questions/questions.component'; 
-
+import { ProtocolComponent } from './protocol/protocol.component';
 const routes: Routes = [
   {path:"", component: IndexComponent, data : {promo: 'normal'}},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
@@ -22,6 +22,7 @@ const routes: Routes = [
 
 
   {path:"promo", component: IndexComponent, data : {promo : 'camisas'}},
+  {path:"protocolo", component:ProtocolComponent, canActivate: [CanAccessGuard]},
   {path:"museu", component:MuseuComponent, canActivate: [CanAccessGuard]},
   {path:"museu/preguntas", component:QuestionsComponent, canActivate: [CanAccessGuard]},
   {path:"museu/premio", component:WinformComponent,  canActivate: [PromotionGuard] },

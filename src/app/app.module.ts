@@ -29,6 +29,7 @@ import { ModalMuseuComponent } from './modal/modal-museu/modal-museu.component';
 import { MuseuModalErrorComponent } from './modal/museu-modal-error/museu-modal-error.component';
 import { MuseuModalSuccessComponent } from './modal/museu-modal-success/museu-modal-success.component';
 import { ModalWaitingComponent } from './modal/modal-waiting/modal-waiting.component';
+import { ProtocolComponent } from './protocol/protocol.component';
 
 
 
@@ -52,7 +53,8 @@ import { ModalWaitingComponent } from './modal/modal-waiting/modal-waiting.compo
     ModalMuseuComponent,
     MuseuModalErrorComponent,
     MuseuModalSuccessComponent,
-    ModalWaitingComponent
+    ModalWaitingComponent,
+    ProtocolComponent
   ],
   imports: [
     BrowserModule,
