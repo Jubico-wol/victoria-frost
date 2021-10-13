@@ -104,8 +104,8 @@ promoType;
           this._api.postPromotion(this.ipAddress,this.data).subscribe(data=>{      
             this.result = data;
             this.success = this.result.result;
-            // console.log(this.success);
-            // console.log(data);
+            console.log(this.success);
+            console.log(data);
 
               if(this.success == "error"){ 
                 this.museuModalError();

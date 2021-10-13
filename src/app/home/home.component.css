@@ -198,7 +198,7 @@ ul.navbar-nav {
     z-index: 999;
 }
 
-
+.barcaLink{    color: #fdd835 !important;}
 /*nav.navbar.navbar-expand-lg.navbar-light.bg-light {
     float: right;
 }*/

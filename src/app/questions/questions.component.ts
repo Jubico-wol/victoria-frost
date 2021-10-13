@@ -205,13 +205,14 @@ ipFlag=false;
   
 
       let obj = JSON.parse(localStorage.getItem('session'));
+      console.log(obj)
 
       this._api.getResultQuestions(obj).subscribe(data=>{
 
         this.data = data ;
         this.messageData = this.data;
 
-
+        console.log(data)
 
 
         if(this.messageData.ganador == true){
@@ -230,7 +231,6 @@ ipFlag=false;
 
 
 
-        // console.log(data);
 
       });
 
