@@ -38,14 +38,17 @@
     left: 77%;
 }
 
+
+.navbar-light {
+    background: #2bd8f7;
+    height: 0px;
+}
+
 .banner{
     background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
-
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-
 
 
 

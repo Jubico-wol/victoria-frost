@@ -492,7 +492,6 @@ a.nav-link:active {
 
 .banner{
     background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
-
     background-size: contain;
     background-repeat: no-repeat;
 }

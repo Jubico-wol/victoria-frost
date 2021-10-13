@@ -78,7 +78,6 @@ label{
 
 
 
-
 .h1, h1 {
     font-size: calc(1.2rem + 0.9vw);
 }
@@ -339,6 +338,11 @@ ul.navbar-nav {
 .bg-light {
     background-color: #2BD8F7!important;
     z-index: 999;
+}
+.banner{
+    background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
@@ -629,5 +633,7 @@ a.nav-link:active {
 
 .navbar-light {
     background: #2bd8f7;
+    height: 0px;
 }
+
 

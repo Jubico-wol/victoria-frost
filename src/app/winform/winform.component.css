@@ -646,3 +646,9 @@ a.nav-link:active {
 }
 
 
+
+
+.navbar-light {
+    background: #2bd8f7;
+    height: 0px;
+}
