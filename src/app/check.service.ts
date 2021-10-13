@@ -90,7 +90,7 @@ export class CheckService {
 
   this.headers.append("Access-Control-Allow-Methods","GET, POST");
   this.headers.append("Access-Control-Allow-Origin","*");
-  return this.http.post(this.url+ ip + tipo, data);
+  return this.http.post(this.url+ ip +'&'+ tipo, data);
   }
 
 }
