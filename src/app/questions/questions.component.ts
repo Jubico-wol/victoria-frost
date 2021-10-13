@@ -18,7 +18,7 @@ export class QuestionsComponent implements OnInit {
 
       this.token = localStorage.getItem('token');
       this._api.removeCookie();
-      // console.log(JSON.stringify(this.token));
+
       localStorage.removeItem('session');
       this.getQuestions(this.token);
       this._api.removeCookie();
@@ -52,15 +52,11 @@ ipFlag=false;
 
       this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
           this.ipAddress = res.ip;
-          // console.log(this.ipAddress);
-
+      
           this._api.getQuestionsByIP(this.ipAddress, val).subscribe(data =>{
         
               this.data = data ;
               this.ip = this.data.result;
-          
-
-              // console.log(this.ip);
 
               if(this.ip == 'ip no valida'){
                
@@ -84,9 +80,7 @@ ipFlag=false;
 
               }
 
-
-
-
+              
           })
 
 
@@ -106,26 +100,14 @@ ipFlag=false;
     
     this.checkedIDs = []
 
-  
-
-
-    // console.log(this.checkedIDs);
-
     const id = $event.target.value;
-    // console.log(name, $event.target.value);
-    // console.log($event);
-
 
     this.p1={
       pregunta: name,
       respuesta: $event.target.value
     }
 
-
-
     this.checkedIDs.push(this.p1);
-
-
 
     var a = [];
     // Parse the serialized data back into an aray of objects
@@ -137,11 +119,7 @@ ipFlag=false;
     // Re-serialize the array back into a string and store it in localStorage
     localStorage.setItem('session', JSON.stringify(a));
 
-
-
     this.next(next);
-
-
 
   }
 
@@ -205,14 +183,12 @@ ipFlag=false;
   
 
       let obj = JSON.parse(localStorage.getItem('session'));
-      console.log(obj)
+  
 
       this._api.getResultQuestions(obj).subscribe(data=>{
 
         this.data = data ;
         this.messageData = this.data;
-
-        console.log(data)
 
 
         if(this.messageData.ganador == true){
@@ -227,9 +203,6 @@ ipFlag=false;
           this.errorMessage1 = "¡HAS FALLADO!"
           this.errorMessage2 = "VOLVÉ A INTENTARLO EL DÍA DE MAÑANA"
         }
-
-
-
 
 
       });

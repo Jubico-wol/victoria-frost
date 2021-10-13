@@ -42,10 +42,10 @@ promoType;
 
 
 
-    // console.log(this.contactForm.value)
+
     this.data = JSON.parse(localStorage.getItem('promo'));
     this.promoType = this.data.promo;
-    // console.log(this.promoType)
+
   }
 
 
@@ -100,12 +100,11 @@ promoType;
 
       this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
         this.ipAddress = res.ip;
-        console.log(this.ipAddress);
+    
           this._api.postPromotion(this.ipAddress,this.data).subscribe(data=>{      
             this.result = data;
             this.success = this.result.result;
-            console.log(this.success);
-            console.log(data);
+        
 
               if(this.success == "error"){ 
                 this.museuModalError();

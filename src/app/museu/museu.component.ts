@@ -29,7 +29,6 @@ token;
       this._api.getMuseuToken().subscribe(data=>{
         this.data = data;
         this.token = this.data.token;
-        console.log(this.token);
         localStorage.setItem('token', this.token);
       });
   }

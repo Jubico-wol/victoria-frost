@@ -23,14 +23,19 @@ export class IndexComponent implements OnInit {
 
 
 
-    sub;    
+    sub;   
+    data;
+    promo; 
   ngOnInit(): void {
 
+    
+      this.sub = this.route.data.subscribe((data) => {
+ 
+        localStorage.setItem('promo', JSON.stringify(data));
+        this.data = data;
+        this.promo =  this.data.promo;
 
-    this.sub = this.route.data.subscribe((data) => {
-      // console.log(data);
-      localStorage.setItem('promo', JSON.stringify(data));
-    });
+      });
 
 
     
@@ -46,6 +51,7 @@ export class IndexComponent implements OnInit {
   private ano = this.fecha.getFullYear();
   private edad;
   enter(){
+  
   this.edad = this.ano - this.year ;
     if( this.day >31 || this.month >12 || this.year >this.ano ){
       this.modal();
@@ -67,8 +73,18 @@ export class IndexComponent implements OnInit {
              this.modal();
             }
             if(this.edad >=18){   
-            this.cookieService.set( 'ASkjfwuihJKFH', 'Victoria Frost', {expires: 0.1, sameSite: 'Lax'});
-            this.router.navigate(['home']);
+
+              if(this.promo == "camisas"){
+                this.cookieService.set( 'ASkjfwuihJKFH', 'Victoria Frost', {expires: 0.1, sameSite: 'Lax'});
+                this.router.navigate(['museu']);
+              }else{
+                this.cookieService.set( 'ASkjfwuihJKFH', 'Victoria Frost', {expires: 0.1, sameSite: 'Lax'});
+                this.router.navigate(['home']);
+              }
+
+
+
+        
             }
   
         }
