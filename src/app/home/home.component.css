@@ -293,8 +293,9 @@ a.nav-link:active {
 }
 
 .navbar-collapse {
-    padding-top: 1%;
+    padding-top: 0%;
 }
+/* .nav-item{font-size: 15px;} */
 
 .container-fluid{
     background: #2bd8f7;

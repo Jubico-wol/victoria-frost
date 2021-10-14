@@ -439,7 +439,7 @@ a.nav-link:active {
 }
 
 .navbar-collapse {
-    padding-top: 1%;
+    padding-top: 0%;
 }
 .container-fluid{
     background: #2bd8f7;
