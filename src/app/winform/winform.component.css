@@ -652,3 +652,6 @@ a.nav-link:active {
     background: #2bd8f7;
     height: 0px;
 }
+.container-fluid{
+    background: #2bd8f7;
+}

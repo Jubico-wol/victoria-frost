@@ -294,7 +294,9 @@ a.nav-link:active {
 .navbar-collapse {
     padding-top: 1%;
 }
-
+.container-fluid{
+    background: #2bd8f7;
+}
 /*css media querys mobile*/
 
 @media (min-width:800px) {
