@@ -5,13 +5,13 @@
     background-size: cover;
 }
 
-.bg-light{
+/* .bg-light{
     background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
  
-}
+} */
 
 .center{
     text-align: center;
@@ -339,11 +339,11 @@ ul.navbar-nav {
     background-color: #2BD8F7!important;
     z-index: 999;
 }
-.banner{
+/* .banner{
     background: url(../../assets/museu/PLECA-BARCA-VF.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */
 
 
 /*nav.navbar.navbar-expand-lg.navbar-light.bg-light {
