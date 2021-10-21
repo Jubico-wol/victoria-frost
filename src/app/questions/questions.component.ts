@@ -13,10 +13,16 @@ export class QuestionsComponent implements OnInit {
   constructor(private _api:CheckService,  private http:HttpClient ) { }
 
   token;
-
+  promo;
+promotion;
   ngOnInit(): void {
 
       this.token = localStorage.getItem('token');
+      this.promo =  JSON.parse(localStorage.getItem("promo"));
+     
+      console.log(this.promo)
+      this.promotion = this.promo.promo;
+      console.log(this.promotion)
       this._api.removeCookie();
 
       localStorage.removeItem('session');
@@ -46,9 +52,7 @@ ip;
 ipFlag=false;
 
 
-
   getQuestions(val){
-
 
       this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
           this.ipAddress = res.ip;

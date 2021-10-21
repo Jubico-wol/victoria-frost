@@ -385,8 +385,12 @@
               <div class="container center">
                 <div class="row">
             
-                  <div class="col-md-12">
+                  <div *ngIf="promotion == 'normal'" class="col-md-12">
                     <img class="w-100" src="../../assets/museu/formLetters.png" alt="">
+                  </div>
+
+                  <div *ngIf="promotion == 'camisas'" class="col-md-12">
+                    <img class="w-50" src="../../assets/museu/promo.png" alt="">
                   </div>
 
                   <div class="col-md-12">
