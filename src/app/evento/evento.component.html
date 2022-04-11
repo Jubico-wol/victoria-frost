@@ -8,7 +8,7 @@
 <section class="evento-main">
   
     <div class="container flex">
-        <div class="row">
+        <div class="row row-width">
             <div class="col-md-4">
                 <img class="pelca-blue" src="../../assets/evento-verano/font-pelca.png" alt="">
                 <img class="pelca-blue" src="../../assets/evento-verano/imagen_prodcuto.png" alt="">
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="event-title">Del jueves 14 al domingo 17 de abril</div>
-                        <div class="event-container">
+                        <div class="event-container pointer" (click)="openModal(1)">
                             <img class="event-img" src="../../assets/evento-verano/oasis.png" alt="">
 
                             <div class="evento-desctription">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
 
-                            <div class="event-location pointer" (click)="openModal(1)">
+                            <div class="event-location">
                                 <div class="txt center"> 
                                     <i class="fa fa-map-marker" aria-hidden="true"></i> 
                                     Locación: San Juan del Sur
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="event-title">15 de abril </div>
-                        <div class="event-container">
+                        <div class="event-container pointer" (click)="openModal(2)">
                             <img class="event-img" src="../../assets/evento-verano/summer_fest.png" alt="">
                             
                             <div class="evento-desctription">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
 
-                            <div class="event-location pointer" (click)="openModal(2)">
+                            <div class="event-location">
                                 <div class="txt center"> 
                                     <i class="fa fa-map-marker" aria-hidden="true"></i> 
                                     Locación: San Juan del Sur
@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="event-title">Jueves 14, viernes 15 y sábado 16</div>
-                        <div class="event-container">
+                        <div class="event-container pointer" (click)="openModal(3)">
                             <img class="event-img" src="../../assets/evento-verano/mega_barra.png" alt="">
                            
                             <div class="evento-desctription">
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
 
-                            <div class="event-location pointer" (click)="openModal(3)">
+                            <div class="event-location">
                                 <div class="txt center"> 
                                     <i class="fa fa-map-marker" aria-hidden="true"></i> 
                                     Locación: Poneloya
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="event-title">Del jueves 14 al sábado 16 de abril</div>
-                        <div class="event-container">
+                        <div class="event-container pointer" (click)="openModal(4)">
                             <img class="event-img" src="../../assets/evento-verano/summer_land.png" alt="">
                            
                             <div class="evento-desctription">
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
 
-                            <div class="event-location pointer" (click)="openModal(4)">
+                            <div class="event-location">
                                 <div class="txt center"> 
                                     <i class="fa fa-map-marker" aria-hidden="true"></i> 
                                     Locación: Montelimar
@@ -115,7 +115,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <div class="event-title">Durante todo el verano</div>
                         <div class="event-container pointer" (click)="openModal(5)">
@@ -126,10 +125,29 @@
                                     <div class="texto center">Promociones y presentaciones especiales </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-title">Durante todo el verano</div>
+                        <div class="event-container pointer" (click)="openModal(6)">
+                            <img class="event-img" src="../../assets/evento-verano/tuanis.png" alt="">
+                         
+                            <div class="evento-desctription">
+                                <div class="centrar">
+                                    <div class="texto center">Tuani’s</div>
+                                </div>
+                            </div>
+
+                            <div class="event-location">
+                                <div class="txt center"> 
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                    Locación: San Juan del Sur
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-                    <div class="col-md-3"></div>
+                    
                 </div>
               </div>
 <br><br>

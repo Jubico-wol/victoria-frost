@@ -11,6 +11,8 @@
     position: relative;
 }
 
+
+
 .pelca-blue{
     width: auto;
     max-width: 100%;
@@ -128,6 +130,21 @@
 .title .show-mobile{
     width: 100%;
 }
+
+
+
+@media (min-width: 1920px) {
+    .evento-main .row{
+        max-width: 100%;
+        width: 100%;
+    }
+    ::ng-deep .cdk-overlay-pane{
+        width: 560px !important;
+    }
+}
+
+
+
 
   @media (max-width: 991px) {
     .pelca-blue{display: none;}
