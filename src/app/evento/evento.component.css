@@ -24,6 +24,24 @@
     z-index: -1;
 }
 
+.pelca-hoja1{
+    width: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.pelca-hoja2{
+    width: auto;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
 .botella{
     background: url(../../assets/evento-verano/imagen_prodcuto.png);
     background-repeat: no-repeat;
@@ -101,14 +119,7 @@
 
 
 
-/* @media (max-width: 820px) {
-    .pelca-blue{display: none;}
-    .hel-1, .hel-2{ display: none;}
-    .col-md-8{
-        flex: 0 0 auto;
-        width: 100%;
-    }
-  } */
+
 
 .show-mobile{
     display: none;
@@ -166,9 +177,27 @@
         right: 0px;
         width: 100%;
     }
+    .pelca-hoja2{display: none;}
   }
 
 
+
+  @media (max-width:720px) {
+      .box{
+          margin: 8%;
+      }
+      .rel{
+          position: relative;
+      }
+      .mobile-bg{
+          background-image: url(../../assets/evento-verano/header_mobile.png);
+          background-repeat: no-repeat;
+          width: 100%;
+          margin:  0;
+          opacity: 0.8;
+          position: absolute;
+      }
+  }
 
 
 
