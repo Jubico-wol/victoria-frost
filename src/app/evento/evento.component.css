@@ -1,0 +1,179 @@
+
+
+
+/* EVENTO CSS STYLES */
+::ng-deep body{
+    background-color: #6EC5F1;
+}
+
+.evento-main{
+    min-height: 100vh;
+    position: relative;
+}
+
+.pelca-blue{
+    width: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.botella{
+    background: url(../../assets/evento-verano/imagen_prodcuto.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-position: bottom;
+}
+.box{ z-index: 1;}
+.img-title{ width: 50%; }
+
+.event-img{ width: 100%; }
+
+.event-title{
+    padding-top: 10%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0;
+    color: #1C2451;
+}
+.evento-desctription{
+    position: relative;
+    margin-bottom: 1%;
+    line-height: 1;
+}
+.evento-desctription .texto{
+    background: url(../../assets/evento-verano/pelca.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75%;
+    height: 37px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.texto{ color: white;}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+.event-location{
+    width: 75%;
+    height: 100%;
+    background-color: #B2E5FF;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: 1px solid white;
+    -webkit-box-shadow: 4px 6px 15px -3px #000000; 
+    box-shadow: 4px 6px 15px -3px #000000;
+}
+
+.event-location .txt{
+    font-weight: 400;
+    /* font-size: 12px; */
+    line-height: 27px;
+    color: #072355;
+}
+
+
+/* DISPLAY CENTERED CONTENT */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+
+
+/* @media (max-width: 820px) {
+    .pelca-blue{display: none;}
+    .hel-1, .hel-2{ display: none;}
+    .col-md-8{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+  } */
+
+.show-mobile{
+    display: none;
+}
+
+.title .show-mobile{
+    width: 100%;
+}
+
+  @media (max-width: 991px) {
+    .pelca-blue{display: none;}
+    .hel-1, .hel-2{ display: none;}
+    .col-md-8{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: rgb(255, 255, 255) !important;
+    }
+    .navbar {
+        display: block !important;
+        min-height: 54px;
+    }
+    .pull-right{
+        float:right !important;
+    }
+    .img-logo {
+        width: 34px;
+        z-index: 2;
+        position: inherit;
+        margin-right: 5%;
+        float:right;
+    }
+    .evento-main {
+        min-height: 100vh;
+        position: inherit;
+    }
+    .container-fluid {
+        background-color: #2BD8F7!important;
+        z-index: 1;
+    }
+    .show-mobile{
+        display: block;
+    }
+    .title{ 
+        position: relative; 
+        z-index: -1;
+    }
+
+    .img-title{
+        position: absolute;
+        top: 60%;
+        margin: 0 auto;
+        text-align: center;
+        right: 0px;
+        width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+

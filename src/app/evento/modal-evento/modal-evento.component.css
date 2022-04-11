@@ -1,0 +1,67 @@
+
+
+.bntn-close { 
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 31px;
+    background-position: center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);
+    /* -webkit-filter: invert(1);
+    filter: invert(1); */
+}
+
+
+
+
+::ng-deep .mat-dialog-container {
+    box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 0%), 0px 24px 38px 3px rgb(0 0 0 / 0%), 0px 9px 46px 8px rgb(0 0 0 / 0%);
+    background: #ffffff00 !important;
+    color: rgba(0, 0, 0, 0.87);
+    border:0px solid #41b6e6;
+}
+  
+::ng-deep .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 0.7;
+    background: url(../../../assets/winner/fondo-ccongelado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 0;
+}
+  
+
+
+
+   
+
+
+
+
+::ng-deep .mat-dialog-container {
+    box-shadow: none !important;
+    background: #fff0 !important;
+    height: auto;
+    overflow: auto;
+    padding: 0;
+}
+
+
+
+
+
+
+
+.modal-content{
+    max-height: 90vh;
+}
+
+
+

@@ -87,3 +87,29 @@ body{
 
 /* html, body { height: 100%; } */
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #072355;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    /* background: #ffffff; */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #072355;
+    border-radius: 10px;
+    /* border: 3px solid #ffffff; */
+  }

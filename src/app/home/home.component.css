@@ -494,3 +494,32 @@ a.nav-link:active {
     height: 0px;
 }
 
+
+
+
+
+/* EVENTO CSS STYLES */
+
+.evento-main{
+    background-color: #6EC5F1;
+    height: 100vh;
+}
+
+.con{height: 100%;}
+.font-blue{
+    background: url(../../assets/evento-verano/font-pelca.png);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* position: absolute; */
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+

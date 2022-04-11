@@ -1,0 +1,31 @@
+/* FOOTER STYLES */
+.footer{
+    background: #072355;
+    color: white;
+}
+
+.img{
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.social{
+    padding-top: 4%;
+    float: right;
+}
+
+.social img{
+    width: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+   
+    .social{
+        float: inherit;
+        text-align: center;
+    }
+    .social img { width: 35px; }
+
+}

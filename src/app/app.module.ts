@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { CookieService } from 'ngx-cookie-service';
 import  {MatDialogModule } from '@angular/material/dialog';
@@ -30,6 +31,10 @@ import { MuseuModalErrorComponent } from './modal/museu-modal-error/museu-modal-
 import { MuseuModalSuccessComponent } from './modal/museu-modal-success/museu-modal-success.component';
 import { ModalWaitingComponent } from './modal/modal-waiting/modal-waiting.component';
 import { ProtocolComponent } from './protocol/protocol.component';
+import { EventoComponent } from './evento/evento.component';
+import { ModalEventoComponent } from './evento/modal-evento/modal-evento.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -54,11 +59,16 @@ import { ProtocolComponent } from './protocol/protocol.component';
     MuseuModalErrorComponent,
     MuseuModalSuccessComponent,
     ModalWaitingComponent,
-    ProtocolComponent
+    ProtocolComponent,
+    EventoComponent,
+    ModalEventoComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
