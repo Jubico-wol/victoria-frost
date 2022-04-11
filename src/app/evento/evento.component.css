@@ -186,17 +186,6 @@
       .box{
           margin: 8%;
       }
-      .rel{
-          position: relative;
-      }
-      .mobile-bg{
-          background-image: url(../../assets/evento-verano/header_mobile.png);
-          background-repeat: no-repeat;
-          width: 100%;
-          margin:  0;
-          opacity: 0.8;
-          position: absolute;
-      }
   }
 
 
