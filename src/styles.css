@@ -48,45 +48,7 @@ body{
   text-align: center;
 }
 
-.padre {
 
-    /*IMPORTANTE*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hijo {
-
-    width: 120px;
-  }
-
-
-
-
-
-
-
-
-  @media (min-width: 2880px) {
-  
-    .logo {
-        margin-top: 250px;
-    }
-    
-  }
-
-
-  @media (min-width: 1080px) and (min-height: 2340px)   { 
-
-    .nueva-formula{
-        top: 100px !important;
-    }
-    
-  }
-
-/* html, body { height: 100%; } */
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 

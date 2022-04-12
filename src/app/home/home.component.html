@@ -1,6 +1,6 @@
 <main>
 
-    <section>
+    <!-- <section>
         <div class="container-fluid">
             <div class="row menu" style="background-color:#2BD8F7; height: 61px;">
                 <div class="col-sm-2 col-md-2 col-lg-2 p-0">
@@ -31,10 +31,6 @@
                                         <a (click)="onClick('section9-bg')" class="nav-link pointer">Stickers</a>
                                     </li>
 
-                                    <!-- <li class="nav-item">
-                                        <a [routerLink]="['/protocolo']" class="nav-link pointer">Protocolo Covid</a>
-                                    </li> -->
-
                                     <li class="nav-item">
                                         <a [routerLink]="['/eventos']" class="nav-link pointer">Eventos</a>
                                     </li>
@@ -43,13 +39,7 @@
                                         <a class="nav-link pointer" target="_blank" href="../../assets/terminos&condiciones-refresca-tu-michelada.pdf">Términos y Condiciones</a>
                                     </li>
                                     
-
-                           
-
-
                                 </ul>
-
-
 
                             </div>
                         </div>
@@ -60,11 +50,55 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
-<section id="banner">
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="hel-1" src="../../assets/evento-verano/hel1.png" alt="">
+    <img class="img-logo" src="../../assets/evento-verano/logo.png" alt="">
+
+   
+    <div class="container-fluid">
+       
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item pointer">
+            <a class="nav-link active" aria-current="page" (click)="onClick('section2-bg')">Nueva Fórmula</a>
+          </li>
+          <li class="nav-item pointer">
+            <a class="nav-link" (click)="onClick('section5-bg')">Características</a>
+          </li>
+          <li class="nav-item pointer">
+            <a class="nav-link" (click)="onClick('section6-bg')">Microfiltrado</a>
+          </li>
+          <li class="nav-item pointer">
+            <!-- <a class="nav-link" (click)="onClick('/home', 'section6-bg')">Stickers</a> -->
+            <a class="nav-link" (click)="onClick('section9-bg')">Stickers</a>
+          </li>
+          <li class="nav-item pointer">
+            <a class="nav-link" [routerLink]="['/eventos']">Eventos</a>
+          </li>
+          <li class="nav-item pointer">
+            <a class="nav-link" href="../../assets/terminos&condiciones-refresca-tu-michelada.pdf" target="_blank">Términos y Condiciones</a>
+          </li>
+        </ul>
+
+      </div>
+
+      
+
+    </div>
+    <img class="hel-2" src="../../assets/evento-verano/hel2.png" alt="">
+  </nav>
+
+
+<section id="banner" class="mat-carousel">
    
     
 
@@ -348,29 +382,7 @@
         </div>
     </section>
 
-
-
-<section id="section10-bg" class="p-3 d-flex justify-content-center">
-    <div class="container row">
-
-        <div class="col-md-8 col-sm-12">
-            <img style="width: 100%; margin: 0 auto; display: block;" src="../../assets/home_page/footer/DECRETO.png">
-        </div>
-        <div class="col-md-4 col-sm-12 text-center pt-sm-3">
-            <a href="https://www.facebook.com/CervezaVictoriaFrost" target="_blank">
-                <img class="redes" src="../../assets/home_page/footer/facebook icon.png" alt="">
-            </a>
-            <a href="https://twitter.com/victoriafrost?lang=es" target="_blank">
-                <img class="redes" src="../../assets/home_page/footer/twiiter icon.png" alt="">
-            </a>
-            <a href="https://www.instagram.com/cervezavictoriafrost/?hl=es" target="_blank">
-                <img class="redes" src="../../assets/home_page/footer/instagram icon.png" alt="">
-            </a>
-
-
-        </div>
-    </div>
-</section>
+<app-footer></app-footer>
 
 
 
