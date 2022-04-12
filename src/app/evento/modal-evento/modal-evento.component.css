@@ -43,9 +43,11 @@
     height: 90vh;
 }
 
-@media (max-width:360px) {
-    .modal-img {
+
+@media (max-width:768px) {
+    .modal-img{
         width: 100%;
         height: auto;
     }
-  }
+}
+
