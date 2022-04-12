@@ -527,6 +527,10 @@ nav{ height: 55px; }
   }
 
 
+
+
+  /* MEDIA QUERYS */
+
 @media (max-width: 991px) {
     .hel-1, .hel-2{ display: none;}
     .navbar-light .navbar-nav .nav-link {
@@ -550,5 +554,10 @@ nav{ height: 55px; }
     .container-fluid {
         background-color: #2BD8F7!important;
         z-index: 1;
+    }
+
+    ::ng-deep .mat-icon {
+        height: 21px !important;
+        opacity: 0.5;
     }
   }
