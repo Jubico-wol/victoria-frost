@@ -82,7 +82,7 @@
             <a class="nav-link" (click)="onClick('section9-bg')">Stickers</a>
           </li>
           <li class="nav-item pointer">
-            <a class="nav-link" [routerLink]="['/eventos']">Eventos</a>
+            <a class="nav-link eventos" [routerLink]="['/eventos']">Eventos</a>
           </li>
           <li class="nav-item pointer">
             <a class="nav-link" href="../../assets/terminos&condiciones-refresca-tu-michelada.pdf" target="_blank">Términos y Condiciones</a>
@@ -102,32 +102,43 @@
    
     
 
+<div>
 
+    
 <mat-carousel 
-  timings="250ms ease-in"
-  [autoplay]="true"
-  interval="5000"
-  color="accent"
-  maxWidth="auto"
-  proportion="25"
-  slides="4"
-  [loop]="true"
-  [hideArrows]="true"
-  [hideIndicators]="true"
-  [useKeyboard]="true"
-  [useMouseWheel]="false"
-  orientation="ltr"
-  lazyLoad="true"
-  (click)="goToEvent()"
+timings="850ms ease-in"
+[autoplay]="true"
+interval="7000"
+color="primary"
+maxWidth="auto"
+proportion="30"
+slides="4"
+[loop]="true"
+[hideArrows]="false"
+[hideIndicators]="true"
+[useKeyboard]="true"
+[useMouseWheel]="false"
+orientation="ltr"
+class="pointer"
+
 >
-  <mat-carousel-slide 
-    #matCarouselSlide
-    *ngFor="let slide of slides; let i = index"
-    [image]="slide.image"
-    load="true"
-    [hideOverlay]="true"
-  ></mat-carousel-slide>
+
+<mat-carousel-slide
+  #matCarouselSlide
+  *ngFor="let slide of slides; let i = index"
+  [image]="slide.image"
+  load="true"
+  [hideOverlay]="true"
+> 
+
+<div class="div-btn-promo" (click)="goToEvent()"></div>
+
+</mat-carousel-slide>
 </mat-carousel>
+
+
+</div>
+
 
 
 

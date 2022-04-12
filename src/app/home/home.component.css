@@ -416,6 +416,10 @@ html {
 
 
 
+
+
+
+
 /* ==== EVENTO CSS STYLES ===== */
 ::ng-deep body{
     background-color: #6EC5F1;
@@ -429,17 +433,46 @@ html {
     width: 100% !important;
 }
 
-::ng-deep mat-carousel .carousel {
-    z-index: -1 !important;
-}
-
 #banner{ cursor: pointer;}
 #banner .carousel {
-    z-index: -1!important;
     cursor: pointer;
 }
+::ng-deep .carousel-slide-content{ cursor: pointer;}
+.carousel > button:last-of-type {
+    right: 30px;
+    z-index: 1 !important;
+}
+::ng-deep .mat-icon {
+    height: 43px !important;
+    background-color: white;
+    color: #6EC5F1;
+    border-color: yellow;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    opacity: 0.8;
+    display: flex !important;
+    align-items: center;
+}
 
+.div-btn-promo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
 
+.btn-promo{
+    text-align: center;
+    background: #3a5fa645;
+    width: 100px;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
 
 /* ====== NAVBAR MENU SETTINGS ===== */
 
@@ -473,7 +506,7 @@ html {
 }
 
 .navbar-light .navbar-nav .nav-link { color: rgb(255 255 255); }
-
+.navbar-light .navbar-nav .nav-link.eventos{ color: red; }
 .navbar-light .navbar-nav .nav-link:hover {
     color: red;
     border-bottom: solid red;
@@ -481,6 +514,13 @@ html {
 }
 nav{ height: 55px; }
 
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    Z-INDEX: 1;
+    BACKGROUND: #2BD8F7;
+}
 
 .activo {
     background-color: #ccc;  
@@ -495,6 +535,7 @@ nav{ height: 55px; }
     .navbar {
         display: block !important;
         min-height: 54px;
+        z-index: 2;
     }
     .pull-right{
         float:right !important;
@@ -511,13 +552,3 @@ nav{ height: 55px; }
         z-index: 1;
     }
   }
-
-
-
-  .navbar-collapse {
-    flex-basis: 100%;
-    flex-grow: 1;
-    align-items: center;
-    Z-INDEX: 1;
-    BACKGROUND: #2BD8F7;
-}

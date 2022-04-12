@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <img class="hel-1" src="../../assets/evento-verano/hel1.png" alt="">
-    <img class="img-logo" src="../../assets/evento-verano/logo.png" alt="">
+    <img class="img-logo" src="../../assets/evento-verano/logo.png" [routerLink]="['/home']">
 
    
     <div class="container-fluid">
@@ -26,7 +26,7 @@
             <a class="nav-link" [routerLink]="['/home']">Stickers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/eventos']">Eventos</a>
+            <a class="nav-link eventos" [routerLink]="['/eventos']">Eventos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../../assets/terminos&condiciones-refresca-tu-michelada.pdf" target="_blank">Términos y Condiciones</a>

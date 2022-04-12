@@ -111,8 +111,6 @@ async getIPAddress()
   slides = [
     {'image': '../../assets/evento-verano/baner-promocion.jpg'},
     {'image': '../../assets/evento-verano/baner-14.jpg'},
-    {'image': '../../assets/evento-verano/baner-promocion.jpg'},
-    {'image': '../../assets/evento-verano/baner-14.jpg'}
   ];
 
 
