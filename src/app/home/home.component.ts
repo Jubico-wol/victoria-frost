@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CheckService } from '../check.service';
 import { HttpClient  } from '@angular/common/http';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -8,8 +8,8 @@ import { ModalMessage2Component } from '../modal/modal-message2/modal-message2.c
 import { ModalMessage3Component } from '../modal/modal-message3/modal-message3.component';
 import { ModalMuseuComponent } from '../modal/modal-museu/modal-museu.component';
 import { CookieService } from 'ngx-cookie-service';
-
-
+import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+import { Router  } from "@angular/router";
 
 
 
@@ -28,13 +28,12 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private viewportScroller: ViewportScroller, 
+    private router: Router,
     private cookieService: CookieService,
     private _api:CheckService, 
     private http:HttpClient,
     public matDialog: MatDialog, 
-    public dialog: MatDialog,
-    private renderer2: Renderer2,
-    private elementRef: ElementRef
+    public dialog: MatDialog
     ) { }
 
 
@@ -44,12 +43,6 @@ export class HomeComponent implements OnInit {
     localStorage.removeItem('session');
     // this.getIPAddress();
     // this.modaMuseu();
-
-
-
-    
-
-   
   }
 
   public onClick(elementId: string): void { 
@@ -60,10 +53,8 @@ data:any;
 ganador:any;
 message;
 
-
 async getIPAddress()
   {
-
     this.http.get("https://api.ipify.org/?format=json").subscribe(async (res:any)=>{
       this.ipAddress = res.ip;
    
@@ -80,48 +71,32 @@ async getIPAddress()
 
         if(this.message==2){ this.modalMessage2(); }
         if(this.message==3){ this.modalMessage3(); }
-      
-      
+    
       });
-
     });
   }
-
-
-
-
   modalWinner() {
-  
     const dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(ModalWinnerComponent, {
       width: '600px',
       disableClose: false
     });
   }
-
   modalMessage2() {
-  
     const dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(ModalMessage2Component, {
       width: '600px',
       disableClose: false
     });
   }
-
-
   modalMessage3() {
-  
     const dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(ModalMessage3Component, {
       width: '600px',
       disableClose: false
     });
   }
-
-
-
   modaMuseu() {
-  
     const dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(ModalMuseuComponent, {
       width: '800px',
@@ -129,6 +104,22 @@ async getIPAddress()
       disableClose: true
     });
   }
+
+
+// === SUMMER EVENT ======
+
+  slides = [
+    {'image': '../../assets/evento-verano/baner-promocion.jpg'},
+    {'image': '../../assets/evento-verano/baner-14.jpg'},
+    {'image': '../../assets/evento-verano/baner-promocion.jpg'},
+    {'image': '../../assets/evento-verano/baner-14.jpg'}
+  ];
+
+
+  goToEvent(){
+    this.router.navigate(['/eventos']);
+  }
+
 
 
 

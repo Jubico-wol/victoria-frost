@@ -20,10 +20,19 @@ export class EventoComponent implements OnInit {
     console.log(id);
     const dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(ModalEventoComponent, {
-       width: '380px',
+      width: 'auto',
+      height: 'auto',
+ 
+ 
       disableClose: false,
       data: {id: id },
     });
   }
+
+
+
+
+ 
+
 
 }

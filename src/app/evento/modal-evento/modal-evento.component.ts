@@ -25,6 +25,16 @@ export class ModalEventoComponent implements OnInit {
   closeModal() {
     this.dialogRef.close();
   }
+
+
+
+  slides = [
+    {'image': '../../assets/evento-verano/baner-promocion-2.jpg'},
+    {'image': '../../assets/evento-verano/baner-14-2.jpg'},
+
+  ];
+
+  
   
 }
 

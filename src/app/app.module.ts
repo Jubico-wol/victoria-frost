@@ -12,6 +12,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // table pagination
 import { NgxPaginationModule } from 'ngx-pagination';
 
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
@@ -75,7 +77,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatCarouselModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
