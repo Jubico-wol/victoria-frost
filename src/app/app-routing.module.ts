@@ -10,14 +10,17 @@ import { MuseuComponent} from './museu/museu.component';
 import { QuestionsComponent } from './questions/questions.component'; 
 import { ProtocolComponent } from './protocol/protocol.component';
 import { EventoComponent } from './evento/evento.component';
+import { Index2Component } from './index2/index2.component';
 const routes: Routes = [
 
-  {path:"", component: IndexComponent, data : {promo: 'normal'}},
+ 
+  {path:"", component: Index2Component},
   {path:"home", component:HomeComponent , canActivate: [CanAccessGuard]},
   {path:"eventos", component:EventoComponent, canActivate: [CanAccessGuard]},
 
+  //{path:"index", component:Index2Component},
 
-
+ // {path:"", component: IndexComponent, data : {promo: 'normal'}},
   // {path:"degustaciones", component:TastingComponent , canActivate: [CanAccessGuard]},
   // {path:"premio", component:WinformComponent , canActivate: [PromotionGuard]},
   // {path:"promo", component: IndexComponent, data : {promo : 'camisas'}},

@@ -37,6 +37,7 @@ import { EventoComponent } from './evento/evento.component';
 import { ModalEventoComponent } from './evento/modal-evento/modal-evento.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { Index2Component } from './index2/index2.component';
 
 
 
@@ -65,7 +66,8 @@ import { FooterComponent } from './footer/footer.component';
     EventoComponent,
     ModalEventoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    Index2Component
   ],
   imports: [
     BrowserModule,

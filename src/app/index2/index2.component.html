@@ -1,0 +1,72 @@
+
+
+<section class="index-main">
+
+    <div class="container">
+        
+        <div class="row">
+           
+            <div class="col-md-2">
+                <img class="notella-init" src="../../assets/index_page/BOTELLA_INICIO.png" alt="">
+            </div>
+            <img class="pelca" src="../../assets/index_page/Contenedor_Titular.png" alt="">
+
+            <div class="col-12 col-md-8 index-ingreso">
+                
+                <div class="ingreso">
+
+                    <div class="">
+                        <div class="row">
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="center"> 
+                                        <img class="img-formula" src="../../assets/index_page/TITULAR_NUEVA FÓRMULA.png" alt="">
+                                        <br><br>
+            
+                                        <div class="card card-date">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="p-2">
+                                                    <input type="number" class="fields" placeholder="DD" [(ngModel)]="day" name="day" minlength="2"  maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                                </div>
+                                                <div class="p-2">
+                                                    <input type="number" class="fields" placeholder="MM" [(ngModel)]="month" name="month"minlength="2"  maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                                </div>
+                                                <div class="p-2">
+                                                    <input type="number" class="fields" placeholder="AAAA" [(ngModel)]="year" name="year" minlength="4"  maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <br><br>
+                                        <div class="col-12 col-md-12">
+                                            <img src="../../assets/index_page/Contenedor_Ingresarc.png" class="btn-ingreso pointer" alt="" (click)="enter()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-2">
+                <img class="hel" src="../../assets/index_page/hel.png" alt="">
+            </div>
+
+          
+
+        </div>
+
+        <div class="row footer-decret">
+            <img class="img-footer" src="../../assets/index_page/DECRETO.png" alt="">
+        </div>
+
+    </div>
+
+</section>

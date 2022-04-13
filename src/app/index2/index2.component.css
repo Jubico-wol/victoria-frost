@@ -1,0 +1,147 @@
+.index-main{
+    background: url(../../assets/index_page/FONDO.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+
+.notella-init{
+    width: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+
+.hel{
+    width: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pelca{
+    width: 100%;
+    min-height: 80vh;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    padding: 0;
+}
+
+
+.btn-ingreso{width: 50%;}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.ingreso{ 
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.index-ingreso{ z-index: 1;}
+
+
+
+.img-formula{ width: 70%;}
+
+.card{
+    background-color: #fff0 !important;
+    border: none;
+}
+
+
+
+.img-footer{
+    width: 60%;
+}
+.footer-decret{
+    display: flex;
+    justify-content: center;
+}
+
+/* INPUTS SETTINGS */
+
+
+.card-date{
+    max-width: 310px;
+    margin: 0 auto;
+}
+
+input{
+    max-width: 80px;
+}
+::placeholder { color: white; }
+.form-select{
+    background-color: #fff0;
+    border: none;
+    font-weight: 700;
+    outline: none;
+}
+.fields {
+	background-color: #12b9f0;
+    color: white;
+	border: none;
+    outline: none;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+input:-internal-autofill-selected{
+    background-color: #e9e9e900 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* MEDIA QUERYS */
+
+  @media (max-width: 991px) {
+      .notella-init{ display: none; }
+      /* .hel{ display: none; } */
+      .img-formula{ width: 90%; }
+      .btn-ingreso { width: 90%; }
+      .img-footer{ width: 100%;}
+      .pelca{
+        top: 33%;
+        min-height: auto;
+        height: auto;
+    }
+  }
+
+  
+  @media (max-width: 360px) {
+    .pelca{
+        top: 33%;
+        min-height: auto;
+        height: auto;
+    }
+  }
