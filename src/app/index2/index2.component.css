@@ -126,7 +126,7 @@ input:-internal-autofill-selected{
 
   @media (max-width: 991px) {
       .notella-init{ display: none; }
-      /* .hel{ display: none; } */
+      .hel{ display: none; }
       .img-formula{ width: 90%; }
       .btn-ingreso { width: 90%; }
       .img-footer{ width: 100%;}

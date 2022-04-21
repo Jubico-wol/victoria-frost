@@ -98,75 +98,14 @@
   </nav>
 
 
-<section id="banner" class="mat-carousel">
-   
-    
-
-<div>
-
-    
-<mat-carousel 
-timings="850ms ease-in"
-[autoplay]="true"
-interval="7000"
-color="primary"
-maxWidth="auto"
-proportion="30"
-slides="4"
-[loop]="true"
-[hideArrows]="false"
-[hideIndicators]="true"
-[useKeyboard]="true"
-[useMouseWheel]="false"
-orientation="ltr"
-class="pointer"
-
->
-
-<mat-carousel-slide
-  #matCarouselSlide
-  *ngFor="let slide of slides; let i = index"
-  [image]="slide.image"
-  load="true"
-  [hideOverlay]="true"
-> 
-
-<div class="div-btn-promo" (click)="goToEvent()"></div>
-
-</mat-carousel-slide>
-</mat-carousel>
-
-
-</div>
-
-
-
-
-
-
-</section>
-
 
 
     <section class="section">
         <div class="video-wrapper">
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SdR8rl-NbB4" frameborder="0" allowfullscreen></iframe> -->
-
-            <!-- <video width="320" height="240" controls>
-                <source src="../../assets/ccn_infografia frost 270421.mp4" type="video/mp4">
-            </video> -->
-
-
-
             <video width="560" height="315" poster="../../assets/home_page/02VidInicio/latas-fondco.jpg" controls>
                 <source src="../../assets/VF V1 Nueva formula sabor.mp4" type="video/mp4">
             </video>
-
-
-
         </div>
-
-
     </section>
 
 
